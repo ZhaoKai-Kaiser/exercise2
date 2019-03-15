@@ -10,11 +10,6 @@ cache: npm
 git:
   depth: false,
   quiet: true
-before_install:
-  - echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
-  - git lfs pull
-  -  # start your web application and listen on `localhost`
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 branches:
   only:
     - master
