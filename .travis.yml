@@ -1,15 +1,3 @@
 language: node_js
 node_js:
   - '10'
-addons:
-  chrome: stable
-  sauce_connect:
-    username: 'ZhaoKai-Kaiser'
-    access_key: '20fcdb5f-22c7-4d05-ba62-bc73301faf6e'
-cache: npm
-git:
-  depth: false,
-  quiet: true
-branches:
-  only:
-    - master
