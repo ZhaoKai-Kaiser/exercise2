@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - '10'
+addons:
+  chrome: stable
+  sauce_connect:
+    username: 'ZhaoKai-Kaiser'
+    access_key: '20fcdb5f-22c7-4d05-ba62-bc73301faf6e'
+cache: npm
+git:
+  depth: false,
+  quiet: true
+before_install:
+  - echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
+  - git lfs pull
+  -  # start your web application and listen on `localhost`
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+branches:
+  only:
+    - master
