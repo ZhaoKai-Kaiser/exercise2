@@ -1,2 +1,2 @@
 # mocha.opts
-# --require should
+  --require should
